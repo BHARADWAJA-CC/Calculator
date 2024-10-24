@@ -74,8 +74,11 @@ int main() {
             case 'i':
                 printf("Enter an integer: ");
                 scanf("%d", &a);
-                printf("Will be implemented soon...\n");
-                break;
+		if (a != 0) {
+                printf("The inverse of %d is %f\n", a, 1.0 / a);
+                } else {
+                printf("Inverse of 0 is undefined.\n");
+                break;}
             default:
                 printf("Invalid operation. Please try again.\n");
         }
